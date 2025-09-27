@@ -72,7 +72,7 @@
     border: 1.5px solid gray;
     margin:12px 0px;
 }
-.newtask{
+#newtask{
     top:120px;
     left:44px;
     position: absolute;
@@ -81,6 +81,7 @@
     height:180px;
     border-radius: 15px;
     width:225px;
+    display: none;
 }
 #addtask{
     width:200px;
@@ -88,8 +89,14 @@
     height:25px;
     margin-left: 7px;
     margin-top: 10px;
+    border-radius: 8px;
+    border:1px solid gray;
 }
 #priority,#progress{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left:18.5px;
+    height:25px;
 
 }
 #create{
@@ -108,7 +115,7 @@
 }
 .dd{
     border: .8px solid gray;
-    /* padding:5px; */
+    padding-left:5px;
     margin:10px;
 }
 #duedate{

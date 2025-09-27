@@ -19,14 +19,19 @@
                 <!-- <input id="addtask" type="text" placeholder="add new task"> -->
             </div>
 
-            <div class="newtask">
+            <div id="newtask">
                 <input id="addtask" type="text" placeholder="Task name">
-                <button id="progress">
-
-                </button>
-                <button id="priority">
-
-                </button>
+                <select id="progress">
+                    <option>Done</option>
+                    <option>In Progress</option>
+                    <option>Not Started</option>
+                </select>
+                <!-- <button id="progress"> -->
+                <select id="priority">
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
                 <div class="dd">
                     <label>Due:</label><input id="duedate" type="date">
                     <button id="create">Create</button>
