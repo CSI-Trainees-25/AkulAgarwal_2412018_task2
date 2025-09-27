@@ -50,7 +50,7 @@
     flex-direction: column;
     place-items: center;
 }
-.left{
+#left{
     width:73%;
     height:cover;
     border-right: 1.5px solid rgb(127, 3, 185);
@@ -63,9 +63,9 @@
     width:27%;
     height:cover;
 }
-.content{
+.container{
     width:93%;
-    height:200px;
+    height:150px;
     border-radius: 20px;
     /* background-color: gray; */
     /* border-color: gray; */
@@ -121,4 +121,9 @@
 #duedate{
     margin-left:45px;
     /* padding:5px; */
+}
+.title{
+    padding-left: 15px;
+    margin-top: 8px;
+    margin-bottom:8px;
 }
