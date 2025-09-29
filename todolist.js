@@ -8,30 +8,32 @@ document.getElementById("addbtn").addEventListener("click", function(){
     newbox.style.display="block";
 })
 const create = document.getElementById("create");
-create.addEventListener("click", function(){
-    newbox.style.display="none";
+create.addEventListener("click", function() {
+    newbox.style.display = "none";
     let tasktitle = newtask.value.trim();
     let priority = prior.value;
     let progress = prog.value;
     let duedate = date.value;
-    left.innerHTML=`
-    <div class="container">
+    if (tasktitle === "") return; 
+    let card = document.createElement("div");
+    card.classList.add("container");
+    card.innerHTML = `
         <h2 class="title">${tasktitle}</h2>
         <hr>
-        <select id="progress">
-            <option>Done</option>
-            <option>In Progress</option>
-            <option>Not Started</option>
+        <select class="progress">
+            <option${progress === "Done" ? " selected" : ""}>Done</option>
+            <option${progress === "In Progress" ? " selected" : ""}>In Progress</option>
+            <option${progress === "Not Started" ? " selected" : ""}>Not Started</option>
         </select>
-        <select id="priority">
-            <option>Low</option>
-            <option>Medium</option>
-            <option>High</option>
+        <select class="priority">
+            <option${priority === "Low" ? " selected" : ""}>Low</option>
+            <option${priority === "Medium" ? " selected" : ""}>Medium</option>
+            <option${priority === "High" ? " selected" : ""}>High</option>
         </select>
         <hr>
         <label>Due Date: ${duedate}</label>
-    </div>
     `;
-    document.getElementById("priori").value=priority;
-    document.getElementById("progr").value=progress;
-})
+    left.appendChild(card);
+    newtask.value = "";     
+    date.value = "";
+});
