@@ -32,7 +32,18 @@ create.addEventListener("click", function() {
         </select>
         <hr>
         <label>Due Date: ${duedate}</label>
+        <hr>
+        <button class="complete-btn">Completed</button>
+        <button class="remove-btn">Remove</button>
     `;
+    const completeBtn = card.querySelector(".complete-btn");
+    completeBtn.addEventListener("click", function() {
+        card.querySelector(".progress").value = "Done"; 
+    });
+    const removeBtn = card.querySelector(".remove-btn");
+    removeBtn.addEventListener("click", function() {
+        card.remove();
+    });
     left.appendChild(card);
     newtask.value = "";     
     date.value = "";
